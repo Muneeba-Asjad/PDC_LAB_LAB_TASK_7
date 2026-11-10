@@ -5,7 +5,6 @@ public class Task4_TraversalComparison {
     public static void main(String[] args) {
         int[][] matrix = new int[ROWS][COLS];
         int RUNS = 5;
-
         long totalRowTime = 0;
         for (int r = 0; r < RUNS; r++) {
             long start = System.nanoTime();
@@ -17,7 +16,6 @@ public class Task4_TraversalComparison {
             }
             totalRowTime += (System.nanoTime() - start);
         }
-
         long totalColTime = 0;
         for (int r = 0; r < RUNS; r++) {
             long start = System.nanoTime();
@@ -29,7 +27,6 @@ public class Task4_TraversalComparison {
             }
             totalColTime += (System.nanoTime() - start);
         }
-
         System.out.printf("Average Row-Wise Traversal Time:    %.4f ms\n", (totalRowTime / (double) RUNS) / 1e6);
         System.out.printf("Average Column-Wise Traversal Time: %.4f ms\n", (totalColTime / (double) RUNS) / 1e6);
     }

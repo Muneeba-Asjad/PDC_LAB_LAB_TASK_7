@@ -14,10 +14,8 @@ public class Task1_MatrixMultiplication {
                 B[i][j] = rand.nextDouble();
             }
         }
-
         System.out.println("Starting matrix multiplication (2048x2048, i-j-k)...");
         long startTime = System.nanoTime();
-
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
                 double sum = 0.0;
@@ -27,7 +25,6 @@ public class Task1_MatrixMultiplication {
                 C[i][j] = sum;
             }
         }
-
         long endTime = System.nanoTime();
         double durationSeconds = (endTime - startTime) / 1e9;
 
